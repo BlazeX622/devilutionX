@@ -196,6 +196,10 @@ if(ANDROID)
   set(DISABLE_ZERO_TIER ON)
   set(TTF_FONT_DIR \"\")
 
+  if(BINARY_RELEASE OR CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -flto=full")
+  endif()
+
   file(
     COPY "${DevilutionX_SOURCE_DIR}/Packaging/resources/CharisSILB.ttf"
     DESTINATION "${DevilutionX_SOURCE_DIR}/android-project/app/src/main/assets")
