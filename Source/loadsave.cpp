@@ -26,6 +26,8 @@
 
 namespace devilution {
 
+BYTE *tbuff;
+
 bool gbIsHellfireSaveGame;
 uint8_t giNumberOfLevels;
 uint8_t giNumberQuests;
@@ -1119,7 +1121,7 @@ void LoadGame(bool firstflag)
 		LoadQuest(&file, i);
 	//for (int i = 0; i < MAXPORTAL; i++)
 	//	LoadPortal(&file, i);
-	LoadPortal(0);
+	LoadPortal(&file, 0);
 	tbuff += 6 * 4 * 3; // Unused portals
 
 	if (gbIsHellfireSaveGame != gbIsHellfire) {
@@ -1905,7 +1907,7 @@ void SaveGameData()
 		SaveQuest(&file, i);
 	//for (int i = 0; i < MAXPORTAL; i++)
 	//	SavePortal(&file, i);
-	SavePortal(0);
+	SavePortal(&file, 0);
 	tbuff += 6 * 4 * 3; // Unused portals
 	
 	for (int monstkill : monstkills)
