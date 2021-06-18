@@ -992,9 +992,15 @@ void AddPlrMonstExper(int lvl, int exp, char pmask)
 	}
 
 	if (totplrs) {
-		e = exp / totplrs;
-		if ((pmask & (1 << myplr)) != 0)
-			AddPlrExperience(myplr, lvl, e);
+		if (!sgOptions.Gameplay.bXPAll){
+			e = exp / totplrs;
+			if ((pmask & (1 << myplr)) != 0)
+				AddPlrExperience(myplr, lvl, e);
+		}
+		else
+		{
+			AddPlrExperience(myplr, lvl, exp);
+		}
 	}
 }
 
