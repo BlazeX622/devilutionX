@@ -631,7 +631,9 @@ static void LoadOptions()
 	sgOptions.Gameplay.bRandomizeQuests = getIniBool("Game", "Randomize Quests", true);
 	sgOptions.Gameplay.bShowMonsterType = getIniBool("Game", "Show Monster Type", false);
 	sgOptions.Gameplay.bDisableCripplingShrines = getIniBool("Game", "Disable Crippling Shrines", false);
-
+	sgOptions.Gameplay.bDisableDropItems = getIniBool("Game", "Disable Drop Items on Death", false);
+	sgOptions.Gameplay.bXPAll = getIniBool("Game", "Share XP to All Players", false);
+	
 	getIniValue("Network", "Bind Address", sgOptions.Network.szBindAddress, sizeof(sgOptions.Network.szBindAddress), "0.0.0.0");
 	sgOptions.Network.nPort = getIniInt("Network", "Port", 6112);
 	getIniValue("Network", "Previous Host", sgOptions.Network.szPreviousHost, sizeof(sgOptions.Network.szPreviousHost), "");
