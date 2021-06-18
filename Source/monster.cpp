@@ -1115,7 +1115,7 @@ void InitMonsters()
 #endif
 	if (!setlevel) {
 		for (int j = 0; j < MAX_PLRS; j++)
-			AddMonster(1, 0, 0, 0, FALSE);
+			AddMonster(1, 0, 0, 0, false);
 	}
 
 	if (!gbIsSpawn && !setlevel && currlevel == 16)
