@@ -1066,9 +1066,6 @@ void LoadGame(bool firstflag)
 {
 	FreeGameMem();
 	pfile_remove_temp_files();
-	pfile_get_game_name(szName);
-	LoadBuff = pfile_read(szName, &dwLen);
-	tbuff = LoadBuff;
 
 	LoadHelper file("game");
 	if (!file.isValid())
@@ -1119,10 +1116,11 @@ void LoadGame(bool firstflag)
 
 	for (int i = 0; i < giNumberQuests; i++)
 		LoadQuest(&file, i);
-	//for (int i = 0; i < MAXPORTAL; i++)
+	for (int i = 0; i < MAX_PLRS; i++)
+	LoadPortal(&file, i);
 	//	LoadPortal(&file, i);
-	LoadPortal(&file, 0);
-	tbuff += 6 * 4 * 3; // Unused portals
+	//LoadPortal(&file, 0);
+	//tbuff += 6 * 4 * 3; // Unused portals
 
 	if (gbIsHellfireSaveGame != gbIsHellfire) {
 		ConvertLevels();
@@ -1905,9 +1903,9 @@ void SaveGameData()
 
 	for (int i = 0; i < giNumberQuests; i++)
 		SaveQuest(&file, i);
-	//for (int i = 0; i < MAXPORTAL; i++)
-	//	SavePortal(&file, i);
-	SavePortal(&file, 0);
+	for (int i = 0; i < MAX_PLRS; i++)
+	SavePortal(&file, i);
+	//SavePortal(&file, 0);
 	tbuff += 6 * 4 * 3; // Unused portals
 	
 	for (int monstkill : monstkills)
