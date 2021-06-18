@@ -11,7 +11,7 @@ namespace devilution {
 int provider;
 namespace {
 
-char selconn_MaxPlayers[21];
+char selconn_MaxPlayers[32];
 char selconn_Description[64];
 char selconn_Gateway[129];
 bool selconn_ReturnValue = false;

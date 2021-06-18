@@ -9,7 +9,7 @@
 
 namespace devilution {
 
-#define MAXPORTAL 4
+#define MAXPORTAL 16
 
 struct PortalStruct {
 	bool open;
@@ -19,7 +19,7 @@ struct PortalStruct {
 	bool setlvl;
 };
 
-extern PortalStruct portal[MAXPORTAL];
+extern PortalStruct portal[MAX_PLRS];
 
 void InitPortals();
 void SetPortalStats(int i, bool o, int x, int y, int lvl, dungeon_type lvltype);

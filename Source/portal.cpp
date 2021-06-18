@@ -14,20 +14,20 @@
 namespace devilution {
 
 /** In-game state of portals. */
-PortalStruct portal[MAXPORTAL];
+PortalStruct portal[MAX_PLRS];
 /** Current portal number (a portal array index). */
 int portalindex;
 
 /** X-coordinate of each players portal in town. */
-int WarpDropX[MAXPORTAL] = { 57, 59, 61, 63 };
+int WarpDropX[MAX_PLRS] = { 57, 59, 61, 63, 57, 59, 61, 63, 57, 59, 61, 63, 57, 59, 61, 63 };
 /** Y-coordinate of each players portal in town. */
-int WarpDropY[MAXPORTAL] = { 40, 40, 40, 40 };
+int WarpDropY[MAX_PLRS] = { 40, 40, 40, 40, 42, 42, 42, 42, 38, 38, 38, 38, 44, 44, 44, 44 };
 
 void InitPortals()
 {
 	int i;
 
-	for (i = 0; i < MAXPORTAL; i++) {
+	for (i = 0; i < MAX_PLRS; i++) {
 		if (delta_portal_inited(i))
 			portal[i].open = false;
 	}
@@ -64,7 +64,7 @@ void SyncPortals()
 {
 	int i;
 
-	for (i = 0; i < MAXPORTAL; i++) {
+	for (i = 0; i < MAX_PLRS; i++) {
 		if (!portal[i].open)
 			continue;
 		if (currlevel == 0)
@@ -182,7 +182,7 @@ bool PosOkPortal(int lvl, int x, int y)
 {
 	int i;
 
-	for (i = 0; i < MAXPORTAL; i++) {
+	for (i = 0; i < MAX_PLRS; i++) {
 		if (portal[i].open && portal[i].level == lvl && ((portal[i].position.x == x && portal[i].position.y == y) || (portal[i].position.x == x - 1 && portal[i].position.y == y - 1)))
 			return true;
 	}
