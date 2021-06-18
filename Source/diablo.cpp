@@ -545,8 +545,6 @@ static void SaveOptions()
 	setIniInt("Game", "Randomize Quests", sgOptions.Gameplay.bRandomizeQuests);
 	setIniInt("Game", "Show Monster Type", sgOptions.Gameplay.bShowMonsterType);
 	setIniInt("Game", "Disable Crippling Shrines", sgOptions.Gameplay.bDisableCripplingShrines);
-	setIniInt("Game", "Disable Drop Items on Death", sgOptions.Gameplay.bDisableDropItems);
-	setIniInt("Game", "Share XP to All Players", sgOptions.Gameplay.bXPAll);
 
 	setIniValue("Network", "Bind Address", sgOptions.Network.szBindAddress);
 	setIniInt("Network", "Port", sgOptions.Network.nPort);
