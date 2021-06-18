@@ -1114,10 +1114,8 @@ void InitMonsters()
 		CheckDungeonClear();
 #endif
 	if (!setlevel) {
-		AddMonster({ 1, 0 }, DIR_S, 0, false);
-		AddMonster({ 1, 0 }, DIR_S, 0, false);
-		AddMonster({ 1, 0 }, DIR_S, 0, false);
-		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		for (int j = 0; j < MAX_PLRS; j++)
+			AddMonster(1, 0, 0, 0, false);
 	}
 
 	if (!gbIsSpawn && !setlevel && currlevel == 16)
@@ -1178,10 +1176,9 @@ void InitMonsters()
 void SetMapMonsters(const uint16_t *dunData, Point startPosition)
 {
 	AddMonsterType(MT_GOLEM, PLACE_SPECIAL);
-	AddMonster({ 1, 0 }, DIR_S, 0, false);
-	AddMonster({ 1, 0 }, DIR_S, 0, false);
-	AddMonster({ 1, 0 }, DIR_S, 0, false);
-	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	for (int k = 0; k < MAX_PLRS; k++)
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+	
 	if (setlevel && setlvlnum == SL_VILEBETRAYER) {
 		AddMonsterType(UniqMonst[UMT_LAZURUS].mtype, PLACE_UNIQUE);
 		AddMonsterType(UniqMonst[UMT_RED_VEX].mtype, PLACE_UNIQUE);

@@ -475,8 +475,8 @@ void PlayDungMsgs();
 
 /* data */
 
-extern int plrxoff[9];
-extern int plryoff[9];
+extern int plrxoff[16];
+extern int plryoff[16];
 extern int plrxoff2[9];
 extern int plryoff2[9];
 extern int StrengthTbl[enum_size<HeroClass>::value];
