@@ -10,6 +10,7 @@
 namespace devilution {
 
 #define MAXPORTAL 16
+#define MAX_PLRS 16
 
 struct PortalStruct {
 	bool open;
