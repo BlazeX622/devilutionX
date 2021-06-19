@@ -628,7 +628,7 @@ static void LoadOptions()
 	sgOptions.Gameplay.bAutoEquipHelms = getIniBool("Game", "Auto Equip Helms", true);
 	sgOptions.Gameplay.bAutoEquipShields = getIniBool("Game", "Auto Equip Shields", true);
 	sgOptions.Gameplay.bAutoEquipJewelry = getIniBool("Game", "Auto Equip Jewelry", true);
-	sgOptions.Gameplay.bRandomizeQuests = getIniBool("Game", "Randomize Quests", true);
+	sgOptions.Gameplay.bRandomizeQuests = getIniBool("Game", "Randomize Quests", false);
 	sgOptions.Gameplay.bShowMonsterType = getIniBool("Game", "Show Monster Type", true);
 	sgOptions.Gameplay.bDisableCripplingShrines = getIniBool("Game", "Disable Crippling Shrines", true);
 	sgOptions.Gameplay.bDisableDropItems = getIniBool("Game", "Disable Drop Items on Death", true);
