@@ -62,7 +62,7 @@ bool chrbtnactive;
 char sgszTalkMsg[MAX_SEND_STR_LEN];
 int pnumlines;
 bool pinfoflag;
-bool talkButtonsDown[3];
+bool talkButtonsDown[MAX_PLRS - 1];
 spell_id pSpell;
 uint16_t infoclr;
 int sgbPlrTalkTbl;
