@@ -621,7 +621,7 @@ static void LoadOptions()
 	sgOptions.Gameplay.bTestBarbarian = getIniBool("Game", "Test Barbarian", true);
 	sgOptions.Gameplay.bExperienceBar = getIniBool("Game", "Experience Bar", true);
 	sgOptions.Gameplay.bEnemyHealthBar = getIniBool("Game", "Enemy Health Bar", true);
-	sgOptions.Gameplay.bAutoGoldPickup = getIniBool("Game", "Auto Gold Pickup", false);
+	sgOptions.Gameplay.bAutoGoldPickup = getIniBool("Game", "Auto Gold Pickup", true);
 	sgOptions.Gameplay.bAdriaRefillsMana = getIniBool("Game", "Adria Refills Mana", true);
 	sgOptions.Gameplay.bAutoEquipWeapons = getIniBool("Game", "Auto Equip Weapons", true);
 	sgOptions.Gameplay.bAutoEquipArmor = getIniBool("Game", "Auto Equip Armor", true);
