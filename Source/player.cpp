@@ -1712,7 +1712,13 @@ StartPlayerKill(int pnum, int earflag)
 		NetSendCmdParam1(true, CMD_PLRDEAD, earflag);
 	}
 
-	diablolevel = gbIsMultiplayer && player.plrlevel == 16;
+	// Disable items dropping on death 
+	if (!sgOptions.Gameplay.bDisableDropItems) {
+		diablolevel = gbIsMultiplayer && player.plrlevel == 16;
+	}
+	else{
+		diablolevel = true;
+	}
 
 	player.Say(HeroSpeech::OofAh);
 
