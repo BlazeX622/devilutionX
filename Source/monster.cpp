@@ -1118,6 +1118,18 @@ void InitMonsters()
 		AddMonster({ 1, 0 }, DIR_S, 0, false);
 		AddMonster({ 1, 0 }, DIR_S, 0, false);
 		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
+		AddMonster({ 1, 0 }, DIR_S, 0, false);
 	}
 
 	if (!gbIsSpawn && !setlevel && currlevel == 16)
@@ -1182,6 +1194,19 @@ void SetMapMonsters(const uint16_t *dunData, Point startPosition)
 	AddMonster({ 1, 0 }, DIR_S, 0, false);
 	AddMonster({ 1, 0 }, DIR_S, 0, false);
 	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+	AddMonster({ 1, 0 }, DIR_S, 0, false);
+
 	if (setlevel && setlvlnum == SL_VILEBETRAYER) {
 		AddMonsterType(UniqMonst[UMT_LAZURUS].mtype, PLACE_UNIQUE);
 		AddMonsterType(UniqMonst[UMT_RED_VEX].mtype, PLACE_UNIQUE);
