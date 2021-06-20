@@ -9,7 +9,7 @@
 
 namespace devilution {
 
-#define MAXPORTAL 4
+#define MAXPORTAL 16
 
 struct PortalStruct {
 	bool open;

@@ -12,7 +12,7 @@
 namespace devilution {
 
 // must be unsigned to generate unsigned comparisons with pnum
-#define MAX_PLRS 4
+#define MAX_PLRS 16
 
 enum event_type : uint8_t {
 	EVENT_TYPE_PLAYER_CREATE_GAME,
