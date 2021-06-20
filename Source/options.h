@@ -108,6 +108,10 @@ struct GameplayOptions {
 	bool bShowMonsterType;
 	/** @brief Locally disable clicking on shrines which permanently cripple character. */
 	bool bDisableCripplingShrines;
+	/** @brief dont drop items on death */
+	bool bDisableDropItems;
+	/** @brief Give monster experience to all players  */
+	bool bXPAll;
 };
 
 struct ControllerOptions {

@@ -992,9 +992,15 @@ void AddPlrMonstExper(int lvl, int exp, char pmask)
 	}
 
 	if (totplrs) {
-		e = exp / totplrs;
-		if ((pmask & (1 << myplr)) != 0)
-			AddPlrExperience(myplr, lvl, e);
+		if (!sgOptions.Gameplay.bXPAll){
+			e = exp / totplrs;
+			if ((pmask & (1 << myplr)) != 0)
+				AddPlrExperience(myplr, lvl, e);
+		}
+		else
+		{
+			AddPlrExperience(myplr, lvl, exp);
+		}
 	}
 }
 
@@ -1706,7 +1712,13 @@ StartPlayerKill(int pnum, int earflag)
 		NetSendCmdParam1(true, CMD_PLRDEAD, earflag);
 	}
 
-	diablolevel = gbIsMultiplayer && player.plrlevel == 16;
+	// Disable items dropping on death 
+	if (!sgOptions.Gameplay.bDisableDropItems) {
+		diablolevel = gbIsMultiplayer && player.plrlevel == 16;
+	}
+	else{
+		diablolevel = true;
+	}
 
 	player.Say(HeroSpeech::OofAh);
 
